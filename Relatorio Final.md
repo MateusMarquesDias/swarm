@@ -196,6 +196,6 @@ services:
 O Docker Swarm oferece uma solução robusta para a orquestração de containers em ambientes distribuídos. A capacidade de criar, distribuir e gerenciar aplicativos em um enxame facilita a escalabilidade e a manutenção de infraestruturas distribuídas. A combinação do Docker Compose para definição de pilhas de aplicativos e o Docker Swarm para orquestração fornece uma abordagem poderosa para implementações eficientes e dimensionáveis de aplicações containerizadas.
 
 ## Referências
-<https://labs.play-with-docker.com/#>
+* <https://labs.play-with-docker.com/#>
 
-<https://docs.docker.com/engine/swarm/stack-deploy/>
+* <https://docs.docker.com/engine/swarm/stack-deploy/>
