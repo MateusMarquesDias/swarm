@@ -1,0 +1,23 @@
+  services:
+    web:
+      image: 127.0.0.1:5000/stackdemo
+      deploy:
+        replicas: 5
+      build: .
+      ports:
+        - "8000:8000"
+
+    redis:
+      image: redis:alpine
+
+    mysql:
+      image: mysql
+      deploy:
+        replicas: 2
+      environment:
+        MYSQL_ROOT_PASSWORD: ""
+        MYSQL_DATABASE: "localhost"
+        MYSQL_PASSWORD: ""
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      volumes:
+        - ./mysql:/var/lib/mysql
