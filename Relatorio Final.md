@@ -61,15 +61,15 @@ services:
 ```  
 ## Comando Utilizados:
 ### 1. inciar o docker swarm:
-`$ docker swarm init --advertise-addr (IP)`
+```$ docker swarm init --advertise-addr (IP)```
 ### 2. Inicie o registro como um serviço no seu enxame:
-`$ docker service create --name registry --publish published=5000,target=5000 registry:2`
+```$ docker service create --name registry --publish published=5000,target=5000 registry:2```
 ### 3. Verifique seu status com docker service ls:
-`$  docker service ls`
+```$  docker service ls```
 ### 4. Crie um diretório para o projeto:
-`$ mkdir ProjetoWeb`
+```$ mkdir ProjetoWeb```
 
-`$ cd ProjetoWeb`
+```$ cd ProjetoWeb```
 ### 5. Crie um arquivo chamado app.pyno diretório do projeto:
 ```
 import socket
@@ -150,11 +150,11 @@ services:
         - ./mysql:/var/lib/mysql
 ```
 ### 9. Todos os arquivos acima já estavam no Git e foram apenas clonados para o diretório dentro do Docker Playground - ProjetoWeb
-`git clone https://TOKEN@github.com/20232-ifba-saj-ads-tawii/trabalho-equipe.git`
+```git clone https://TOKEN@github.com/20232-ifba-saj-ads-tawii/trabalho-equipe.git```
 ### 10. Ir para diretório e realizar os teste:
-`$ cd trabalho-equipe`
+```$ cd trabalho-equipe```
 
-`$ cd swarm`
+```$ cd swarm```
 ## Teste o aplicativo com compose
 ### 1. inciar o docker swarm
 ![docker swarm init --advertise-addr (IP)](https://github.com/MateusMarquesDias/swarm/blob/main/img/1.jpg)
