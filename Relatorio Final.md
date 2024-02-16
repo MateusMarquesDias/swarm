@@ -149,7 +149,7 @@ services:
 `$ cd swarm`
 ## Teste o aplicativo com compose
 ### 1. inciar o docker swarm
-![docker swarm init --advertise-addr (IP)](URL da imagem)
+![docker swarm init --advertise-addr (IP)]()
 ### 2. Inicie o registro como um serviço no seu enxame
 ![docker service create](URL da imagem)
 ### 3. Verifique seu status com docker service ls
