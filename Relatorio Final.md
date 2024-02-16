@@ -1,5 +1,9 @@
 # Configuração de Ambiente Docker Swarm
 
+## Introdução
+
+Nesse relatório vamos abordar o processo de implantação de uma pilha de aplicativos em um enxame usando o Docker Swarm. O Docker Swarm é uma ferramenta de orquestração que permite a criação e gerenciamento de clusters de containers. A implantação de uma pilha completa de aplicativos em um enxame é facilitada pelo comando docker stack deploy, que aceita uma descrição de pilha no formato de um arquivo Compose. Foram destacados os passos para configurar um registro Docker, criar um aplicativo de exemplo baseado em Python e Flask, e testar o aplicativo localmente usando o Docker Compose. Em seguida, a imagem do aplicativo foi enviada para o registro e finalmente, a pilha foi implantada no enxame.
+
 ## Arquitetura do Ambiente
 O Docker Swarm é uma ferramenta que permite criar e gerenciar clusters de containers. A arquitetura do Docker Swarm inclui vários componentes que colaboram para fornecer recursos de orquestração de containers. Aqui estão os principais componentes da arquitetura do Docker Swarm:
 
@@ -23,6 +27,10 @@ O Docker Swarm é uma ferramenta que permite criar e gerenciar clusters de conta
 ### Service Abstraction:
 * Os serviços no Docker Swarm são a abstração que define a execução de containers no cluster.
 * Eles podem ser escalados para vários nós, e o swarm gerencia a distribuição de tarefas (containers) para atender à escala desejada.
+
+### Docker Registry:
+* Um serviço de registro Docker é iniciado como um serviço no enxame para distribuir imagens para todos os nós.
+* É utilizado o Docker Hub ou um registro próprio, e no tutorial, é criado um registro temporário com o comando docker service create.
 
 ## Arquivo do Docker Compose
 
@@ -183,3 +191,10 @@ services:
 ![Desativando o registro com docker service rm](https://github.com/MateusMarquesDias/swarm/blob/main/img/15.jpg)
 #### 15.5 Tirando o Docker Engine do modo Swarm
 ![Tirando o Docker Engine do modo Swarm](https://github.com/MateusMarquesDias/swarm/blob/main/img/16.jpg)
+
+## Conclusão
+O Docker Swarm oferece uma solução robusta para a orquestração de containers em ambientes distribuídos. A capacidade de criar, distribuir e gerenciar aplicativos em um enxame facilita a escalabilidade e a manutenção de infraestruturas distribuídas. A combinação do Docker Compose para definição de pilhas de aplicativos e o Docker Swarm para orquestração fornece uma abordagem poderosa para implementações eficientes e dimensionáveis de aplicações containerizadas.
+
+## Referências
+<https://labs.play-with-docker.com/#>
+<https://docs.docker.com/engine/swarm/stack-deploy/>
