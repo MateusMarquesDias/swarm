@@ -154,11 +154,11 @@ services:
 ![docker service create](https://github.com/MateusMarquesDias/swarm/blob/main/img/2.jpg)
 ### 3. Verifique seu status com docker service ls
 ![docker service ls](https://github.com/MateusMarquesDias/swarm/blob/main/img/3.jpg)
-### 4. Crie um diretório para o projeto
+### 4. Crie um repositório para o projeto
 ![mkdir ProjetoWeb, cd ProjetoWeb](https://github.com/MateusMarquesDias/swarm/blob/main/img/4.jpg)
 ### 5. Clonando o repositório para o diretório
 ![Clonando o repositório para o diretório](https://github.com/MateusMarquesDias/swarm/blob/main/img/5.jpg)
-### 6. Crie um diretório para o projeto
+### 6. Acessando o diretório clonado
 ![Crie um diretório para o projeto](https://github.com/MateusMarquesDias/swarm/blob/main/img/6.jpg)
 ### 7. Inicie o aplicativo com docker compose up
 ![Inicie o aplicativo com docker compose up](https://github.com/MateusMarquesDias/swarm/blob/main/img/7.jpg)
