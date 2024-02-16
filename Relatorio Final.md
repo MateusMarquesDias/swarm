@@ -149,10 +149,37 @@ services:
 `$ cd swarm`
 ## Teste o aplicativo com compose
 ### 1. inciar o docker swarm
-![docker swarm init --advertise-addr (IP)]()
+![docker swarm init --advertise-addr (IP)](https://github.com/MateusMarquesDias/swarm/blob/main/img/1.jpg)
 ### 2. Inicie o registro como um serviço no seu enxame
-![docker service create](URL da imagem)
+![docker service create](https://github.com/MateusMarquesDias/swarm/blob/main/img/2.jpg)
 ### 3. Verifique seu status com docker service ls
-![docker service ls](URL da imagem)
+![docker service ls](https://github.com/MateusMarquesDias/swarm/blob/main/img/3.jpg)
 ### 4. Crie um diretório para o projeto
-![mkdir ProjetoWeb, cd ProjetoWeb](URL da imagem)
+![mkdir ProjetoWeb, cd ProjetoWeb](https://github.com/MateusMarquesDias/swarm/blob/main/img/4.jpg)
+### 5. Clonando o repositório para o diretório
+![Clonando o repositório para o diretório](https://github.com/MateusMarquesDias/swarm/blob/main/img/5.jpg)
+### 6. Crie um diretório para o projeto
+![Crie um diretório para o projeto](https://github.com/MateusMarquesDias/swarm/blob/main/img/6.jpg)
+### 7. Inicie o aplicativo com docker compose up
+![Inicie o aplicativo com docker compose up](https://github.com/MateusMarquesDias/swarm/blob/main/img/7.jpg)
+![Inicie o aplicativo com docker compose up](https://github.com/MateusMarquesDias/swarm/blob/main/img/7.1.jpg)
+### 8. Usando docker compose up -d
+![Usando docker compose up -d](https://github.com/MateusMarquesDias/swarm/blob/main/img/8.jpg)
+### 9. Verificando se o aplicativo está sendo executado com docker compose ps
+![Verificando se o aplicativo está sendo executado com docker compose ps](https://github.com/MateusMarquesDias/swarm/blob/main/img/9.jpg)
+### 10. Desativando o aplicativo
+![Desativando o aplicativo](https://github.com/MateusMarquesDias/swarm/blob/main/img/10.jpg)
+### 11. Enviar uma imagem gerada para registro
+#### 11.1 Distribuindo a imagem do aplicativo Web pelo enxame usando docker compose push
+![Distribuindo a imagem do aplicativo Web pelo enxame usando docker compose push](https://github.com/MateusMarquesDias/swarm/blob/main/img/11.jpg)
+### 12. Implante a pilha no enxame 
+#### 12.1 Criando a pilha com docker stack deploy
+![Criando a pilha com docker stack deploy](https://github.com/MateusMarquesDias/swarm/blob/main/img/12.jpg)
+#### 12.2 Verificando se está funcionando com docker stack services swarm
+![Verificando se está funcionando com docker stack services swarm](https://github.com/MateusMarquesDias/swarm/blob/main/img/13.jpg)
+#### 12.3 Derrubando a pilha com docker stack rm
+![Derrubando a pilha com docker stack rm](https://github.com/MateusMarquesDias/swarm/blob/main/img/14.jpg)
+#### 12.4 Desativando o registro com docker service rm
+![Desativando o registro com docker service rm](https://github.com/MateusMarquesDias/swarm/blob/main/img/15.jpg)
+#### 15.5 Tirando o Docker Engine do modo Swarm
+![Tirando o Docker Engine do modo Swarm](https://github.com/MateusMarquesDias/swarm/blob/main/img/16.jpg)
