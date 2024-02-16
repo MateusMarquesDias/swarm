@@ -197,4 +197,5 @@ O Docker Swarm oferece uma solução robusta para a orquestração de containers
 
 ## Referências
 <https://labs.play-with-docker.com/#>
+
 <https://docs.docker.com/engine/swarm/stack-deploy/>
