@@ -17,7 +17,7 @@ services:
       - "8000:80"
     networks:
       minha_rede:
-        ipv4_address: 192.168.0.13  # IP fixo para site2
+        ipv4_address: 192.168.0.13
     deploy:
       resources:
         reservations:
