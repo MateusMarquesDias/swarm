@@ -1,4 +1,4 @@
-  version: '3.7'
+version: '3.7'
 
 services:
   web:
@@ -16,8 +16,7 @@ services:
     ports:
       - "8000:80"
     networks:
-      minha_rede:
-        ipv4_address: 192.168.0.13
+      - minha_rede
     deploy:
       resources:
         reservations:
@@ -41,6 +40,18 @@ services:
       placement:
         constraints: [node.role == manager]
 
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - minha_rede
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
 networks:
   minha_rede:
     driver: overlay
@@ -54,3 +65,6 @@ configs:
     file: ./config.txt
   my_secret:
     file: ./secret.txt
+
+volumes:
+  jenkins_home:
