@@ -1,23 +1,56 @@
-  services:
-    web:
-      image: 127.0.0.1:5000/stackdemo
-      deploy:
-        replicas: 5
-      build: .
-      ports:
-        - "8000:8000"
+  version: '3.7'
 
-    redis:
-      image: redis:alpine
+services:
+  site2:
+    image: nginx
+    deploy:
+      replicas: 5
+      endpoint_mode: vip
+      placement:
+        constraints:
+          - node.role == worker
+      resources:
+        reservations:
+          cpus: '0.1'
+          memory: 50M
+    ports:
+      - "8000:80"
+    networks:
+      minha_rede:
+        ipv4_address: 192.168.0.10  # IP fixo para site2
+    deploy:
+      resources:
+        reservations:
+          cpus: '0.1'
+          memory: 50M
+    environment:
+      - SWARM_MODE=1
+    configs:
+      - source: my_config
+        target: /app/config.txt
+      - source: my_secret
+        target: /app/secret.txt
 
-    mysql:
-      image: mysql
-      deploy:
-        replicas: 2
-      environment:
-        MYSQL_ROOT_PASSWORD: ""
-        MYSQL_DATABASE: "localhost"
-        MYSQL_PASSWORD: ""
-        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      volumes:
-        - ./mysql:/var/lib/mysql
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8888:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  minha_rede:
+    driver: overlay
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.0/24  # Range de IPs disponíveis para outros serviços
+
+configs:
+  my_config:
+    file: ./config.txt
+  my_secret:
+    file: ./secret.txt
